@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IBM PowerAI Recognition</title>
+
+    <!-- CSS LOAD -->
+    <link rel="stylesheet" href="/../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="container-fluid">
+
+    <h2>IBM PowerAI Vision Recognition - Object Detection</h2>
+    <hr>
+    <form enctype="multipart/form-data" action="/classify" target="mytarget" method="POST">
+        Choose a file to upload: <br /><br />
+        <!-- accept="image/*" onchange="loadFile(event)"  -->
+        <input name="files" type="file" accept="image/*" onchange="loadFile(event)" required />
+        <br /><br />
+        <img id="imgshow" height="200" /><br />
+        <input type="submit" value="Classify" />
+    </form>
+    <br />
+    <iframe id="mytarget" name="mytarget" style="width:0; height:0; border:0; border:none" src=""></iframe>
+    <article />
+    <div><hr></div>
+
+    <!-- JAVASCRIPT LOAD -->
+    <script src="/../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/main.js"></script>
+
+</body>
+
+</html>
